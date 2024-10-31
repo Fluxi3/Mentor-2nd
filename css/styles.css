@@ -1,0 +1,475 @@
+/* ---------------------------------------------------- */
+/* Variables */
+/* ---------------------------------------------------- */
+:root {
+    --gold: rgb(213, 150, 108);
+    --black: rgb(21, 21, 21);
+    --brown: rgb(68, 68, 68);
+    --white: rgb(255, 255, 255);
+  }
+  
+  /* ---------------------------------------------------- */
+  /* Global Styles */
+  /* ---------------------------------------------------- */
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .header1,
+  .header2,
+  .header3,
+  .button {
+    font-family: "Big Shoulders Display", cursive;
+  }
+  
+  p {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--brown);
+  }
+  
+  /* ---------------------------------------------------- */
+  /* Mobile-First Design */
+  /* ---------------------------------------------------- */
+  
+  /* General Header */
+  .general-header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title-container {
+    position: relative;
+  }
+  
+  .header1 {
+    font-size: 60px; /* Adjusted font size for mobile */
+    margin: 15px 0; /* Simplified margins */
+    color: var(--black);
+  }
+  
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .flex1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 15px;
+  }
+  
+  .paragraph1 {
+    margin-bottom: 40px;
+  }
+  
+  /* Button */
+  .button-location {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--black);
+    padding: 0;
+    margin-bottom: 100px;
+  }
+  
+  .button {
+    padding: 15px 15px;
+    letter-spacing: 2px;
+    background-color: var(--black);
+  }
+  
+  .button-location img {
+    background-color: var(--gold);
+    padding: 15px 15px;
+    height: auto;
+  }
+  
+  .button-location:hover .button {
+    background-color: var(--gold);
+  }
+  
+  .button-location:hover img {
+    background-color: var(--black);
+  }
+
+  /* ---------------------------------------------------- */
+  /* Day at the Gallery */
+  /* ---------------------------------------------------- */
+  .container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .gallery1,
+  .gallery2,
+  .gallery3 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header2,
+  .header3 {
+    font-size: 60px;
+    margin: 20px 0;
+  }
+  
+  .paragraph2,
+  .paragraph3 {
+    margin: 0;
+  }
+  
+  .grid-text {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .grid-text h2 {
+    font-size: 60px;
+    color: var(--white);
+    padding-top: 35px;
+    margin-left: 15px;
+  }
+
+
+  .grid-text p {
+    font-size: 20px;
+    color: var(--white);
+    padding-bottom: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+/* Container Grid Layout for Mobile */
+.container {
+    display: grid;
+    grid-template-areas:
+      "gallery1"
+      "main-content"
+      "gallery2"
+      "gallery3"
+      "grid-text";
+    gap: 20px; /* Adjust as needed */
+  }
+  
+  /* Assign Grid Areas */
+  .gallery1 {
+    grid-area: gallery1;
+    width: 100%;
+    height: auto;
+  }
+  
+  .main-content {
+    grid-area: main-content;
+    padding: 15px; /* Internal padding */
+  }
+  
+  .gallery2 {
+    grid-area: gallery2;
+    width: 100%;
+    height: auto;
+  }
+  
+  .gallery3 {
+    grid-area: gallery3;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .grid-text {
+    grid-area: grid-text;
+  }
+  
+  
+  /* Footer */
+  footer {
+    background-color: var(--black);
+    padding-bottom: 35px;
+  }
+  
+  .logo {
+    padding: 35px;
+    margin-top: 15px;
+  }
+  
+  .paragraph4 {
+    color: var(--white);
+    padding: 0 35px;
+    margin-top: 15px;
+  }
+  
+  .footer-icons {
+    margin-left: 35px;
+    margin-top: 35px;
+  }
+  
+  .icons2,
+  .icons3 {
+    margin-left: 15px;
+  }
+
+  /* ---------------------------------------------------- */
+/* Tablet Design */
+/* ---------------------------------------------------- */
+@media screen and (min-width: 768px) {
+    /* Reset Margins and Paddings */
+    .gallery1,
+    .main-content,
+    .gallery2,
+    .gallery3,
+    .grid-text {
+        margin: 0;
+        padding: 0;
+    }
+
+/* General Header */
+    .general-header {
+        flex-direction: row;
+        position: relative;
+    }
+
+    .title-container,
+    .main-header {
+        flex: 1;
+    }
+
+    .title-container {
+        z-index: -1;
+    }
+
+    .main-header {
+        margin-left: -100px; /* Adjust overlap as needed */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flex1 {
+        padding: 0 15px;
+    }
+
+/* Grid Layout for "Day at the Gallery" Section */
+
+    main {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .right-column {
+        margin-right: 24px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 40% 60%; /* Columns: 40% and 60% widths */
+        grid-template-rows: auto auto; /* Two rows */
+        grid-template-areas:
+        "main-content gallery1"
+        "second-row second-row"; /* Second row spans both columns */
+        margin-top: 80px;
+    }
+
+/* Grid Areas Assignment */
+    .main-content {
+        grid-area: main-content;
+        padding-right: 30px;
+    }
+
+    .header2 {
+        padding-bottom: 20px;
+    }
+
+    .gallery1 {
+        grid-area: gallery1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .second-row {
+        grid-area: second-row;
+        display: grid;
+        grid-template-columns: 60% 40%; /* Nested columns: 60% and 40% widths */
+        grid-template-areas: "left-image right-column";
+        gap: 20px;
+        margin-bottom: 70px;
+    }
+
+/* Second Row Left Column */
+    .gallery2 {
+        grid-area: left-image;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+/* Second Row Right Column (Nested Grid) */
+    .right-column {
+    grid-area: right-column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "top-image"
+        "text-content";
+    height: 100%;
+    gap: 20px;
+    }
+
+/* Right Column Items */
+    .gallery3 {
+    grid-area: top-image;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    
+    .grid-text {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-area: text-content;
+    align-self: center;
+    height: 100%;
+    }
+    
+    /* Ensure Equal Heights */
+    .gallery2,
+    .right-column {
+      height: 100%;
+    }
+  
+    /* Adjust Headings and Paragraphs */
+    .header2,
+    .header3 {
+      margin: 0 0 10px 0; /* Only bottom margin */
+      font-size: 60px; /* Adjust font size for tablet */
+    }
+
+}
+
+
+/* ---------------------------------------------------- */
+/* Desktop Design */
+/* ---------------------------------------------------- */
+@media screen and (min-width: 1025px) {
+    html {
+        margin: 0 auto;
+    }
+    /* General Header */
+    .general-header {
+      display: grid;
+      grid-template-columns: 30% 50% 20%;
+      position: relative;
+      height: 100vh; /* Full viewport height */
+      overflow: hidden;
+    }
+  
+    /* Left Black Column */
+    .general-header::before {
+      content: '';
+      background-color: var(--black);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30%;
+      height: 100%;
+      z-index: -1;
+    }
+  
+    /* Right White Column */
+    .general-header::after {
+      content: '';
+      background-color: var(--white);
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20%;
+      height: 100%;
+      z-index: -1;
+    }
+  
+    /* Title Container (Hero Image) */
+    .title-container {
+      grid-column: 2 / 3;
+      grid-row: 1 / 1;
+      height: 100%;
+    }
+  
+    .title-container picture,
+    .title-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    /* Main Header (Text Content) */
+    .main-header {
+      display: block;
+      position: absolute;
+      top: 40px;
+      left: calc(25% - 60px); /* Adjust as needed */
+    }
+  
+    /* Use CSS Grid within .flex1 */
+    .flex1 {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+      grid-column-gap: 30px; /* Adjust gap between columns */
+      align-items: start;
+      z-index: 1;
+    }
+  
+    .header1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3; /* Span both rows */
+      font-size: 80px;
+      line-height: 1.1;
+      color: var(--white);
+      margin: 0;
+      text-align: left;
+      mix-blend-mode: difference;
+      margin-top: 200px;
+    }
+  
+    .paragraph1 {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      min-width: 400px;
+      font-size: 20px;
+      color: var(--brown);
+      margin-left: 55%;
+      margin-top: 200px;
+
+    }
+  
+    .button-location {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      margin-top: 20px;
+      margin-left: 55%;
+      max-width: fit-content;
+    }
+  }
+  
+  
+  

@@ -1,0 +1,142 @@
+:root {
+    --gold: rgb(213, 150, 108);
+    --black: rgb(21, 21, 21);
+    --brown: rgb(68, 68, 68);
+    --white: rgb(255, 255, 255);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2,
+h4,
+.button {
+    font-family: "Big Shoulders Display", cursive;
+}
+
+p {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--brown)
+}
+
+/* ---------------------------------------------------- */
+/* Styles for the "Back to Home" button */
+/* ---------------------------------------------------- */
+.button-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--black);
+    position: absolute; /* Position it on top of the map */
+
+}
+
+/* Text inside the button */
+.button {
+    padding: 20px 20px;
+}
+
+/* Icon styling */
+.button-container img {
+    background-color: var(--gold);
+    padding: 20px 20px;
+}
+
+.map {
+    margin-bottom: 0;
+}
+/* Ensure map image fills the container */
+.map-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+}
+
+/* hover effect for the button */
+.button-container:hover .button {
+    background-color: var(--gold);
+}
+
+.button-container:hover img {
+    background-color: var(--black);
+}
+
+/* ---------------------------------------------------- */
+/* Our Location Section */
+/* ---------------------------------------------------- */
+
+.main-part {
+    background-color: var(--black);
+}
+
+h2 {
+    font-size: 60px;
+    color: var(--white);
+    margin-left: 15px;
+    padding-top: 35px;
+}
+
+h4 {
+    font-size: 36px;
+    color: var(--gold);
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: var(--white);
+    margin-left: 15px;
+}
+
+.paragraph4 {
+    padding-top: 15px;
+    padding-bottom: 35px;
+    font-family: "Outfit";
+    margin-right: 15px;
+}
+
+.paragraph p {
+    margin-left: 15px;
+    margin-right: 15px;    
+}
+
+/* ---------------------------------------------------- */
+/* Footer */
+/* ---------------------------------------------------- */
+
+footer {
+    background-color: var(--gold);
+}
+
+footer img {
+    padding: 35px;
+    fill: var(--black) !important;
+}
+
+footer p {
+    color: var(--black);
+    padding-left: 20px;
+    margin-right: 15px;
+}
+
+.footer-icons {
+    padding-left: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.icons2,
+.icons3 {
+padding-left: 15px;
+}
